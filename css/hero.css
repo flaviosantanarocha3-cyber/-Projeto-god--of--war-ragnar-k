@@ -1,0 +1,108 @@
+
+/* ==================== SEÇÃO HERO ==================== */
+/*
+   HERO LIVRE: ficou só com a mensagem de impacto.
+*/
+.s-hero {
+    /* altura minima de uma tela inteira (cresce se precisar) */
+    min-height: 92vh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 12rem;
+
+    background-image: radial-gradient(ellipse at 18% 82%,
+            rgba(50, 101, 234, 0.18) 0%,
+            rgba(0, 2, 1, 0) 55%),
+        linear-gradient(to bottom,
+            rgba(0, 2, 1, 0.55) 0%,
+            rgba(0, 2, 1, 0.75) 55%,
+            #000201 100%),
+        url('../assets/img/personagem/imagemHero.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    /* CORRIGIDO: era contain (deixava vazio nas laterais);
+       cover preenche a tela inteira, padrao cinematico */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+.s-hero .container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+/* --- texto da hero (unico .left desta secao) --- */
+.s-hero .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.s-hero .left h1 {
+
+    margin-top: 3.2rem;
+    margin-bottom: 1.6rem;
+    /* clamp: cresce com a tela sem estourar no celular */
+    font-size: clamp(3.6rem, 6.5vw, 7.2rem);
+    line-height: 100%;
+
+    /* brilho azul atras do titulo (profundidade) */
+    text-shadow: 0 0.4rem 4rem rgba(50, 101, 234, 0.35);
+}
+
+.hero-frase {
+    /* paragrafo destaque da hero (20px) */
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 140%;
+    margin-bottom: 4.8rem;
+    color: #ffffff;
+}
+
+/* botao da hero */
+.value {
+
+    display: flex;
+
+}
+
+.value strong {
+
+    background-color: #ffffff;
+    padding: 2.4rem 3.2rem;
+    color: #000201;
+    font-weight: 700;
+    line-height: 2.2rem;
+    font-size: 1.8rem;
+    transition: all 300ms ease;
+}
+
+.value strong:hover {
+    background-color: #d4d7dc;
+    transform: translateY(-0.3rem);
+}
+
+.value a {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.4rem 3.2rem;
+    background-color: #3265ea;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: #ffffff;
+    transition: all 300ms ease;
+}
+
+.value a:hover {
+    background-color: #2a56c6;
+    transform: translateY(-0.3rem);
+}

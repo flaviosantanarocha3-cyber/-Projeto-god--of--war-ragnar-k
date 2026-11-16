@@ -1,0 +1,94 @@
+
+
+/* ==================== RESET & BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Archivo Narrow', sans-serif;
+    color: white;
+    text-decoration: none;
+
+}
+
+html {
+    margin: 0 auto;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000201;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ==================== CONTAINER ==================== */
+.container {
+
+    width: 100%;
+    max-width: 140.8rem;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* ==================== COMPONENTES ==================== */
+/* etiqueta com icone losango + texto (usada em todas as secoes) */
+.subtitle {
+    display: flex;
+    align-items: center;
+
+}
+
+.subtitle span {
+    font-weight: 400;
+    font-size: 1.6rem;
+    /* 16px */
+    line-height: 2.2rem;
+    color: #ffffff;
+    margin-left: 1.5rem;
+
+}
+
+/* h2 padrao das secoes (era diferente em cada uma; agora um so) */
+h1 {
+
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 110%;
+}
+
+
+h2 {
+
+    font-weight: 700;
+    font-size: 4rem;
+    /* 40px: tamanho padrao de titulo de secao */
+    color: white;
+    line-height: 130%;
+
+}
+
+/* p padrao (paragrafo de leitura das secoes) */
+p {
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    /* 16px: padrao de paragrafo */
+    line-height: 160%;
+    color: #bdc2cb;
+    text-align: justify;
+}

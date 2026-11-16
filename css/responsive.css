@@ -1,0 +1,556 @@
+
+/* ============================================================
+   RESPONSIVO
+   Pontos de quebra: 1200 / 991 / 560 / 478px
+   ============================================================ */
+
+/* ---------- telas medias (ate 1200px) ---------- */
+@media (max-width: 1200px) {
+
+    /* hero centralizado */
+    .s-hero .container {
+        justify-content: center;
+    }
+
+    .s-hero .left {
+        text-align: center;
+        max-width: 60rem;
+    }
+
+    .s-hero .left .subtitle {
+        justify-content: center;
+    }
+
+    .value {
+        justify-content: center;
+    }
+
+    /* trailer empilha: texto em cima, video embaixo */
+    .s-trailer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .s-trailer .left .subtitle {
+        justify-content: center;
+    }
+
+    .s-trailer .left h2 {
+        text-align: center;
+    }
+    .s-trailer .left p {
+        text-align: center;
+    }
+
+    /* info geral: icones quebram em 3 por linha */
+    .s-info-geral ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3.2rem 0;
+    }
+
+    .s-info-geral ul li {
+        width: 30%;
+    }
+
+    /* titulos das secoes caem um degrau na escala */
+    .s-trailer h2,
+    .s-story .left h2,
+    .description .left h2,
+    .s-lenda .left h2,
+    .slide-characters h2 {
+        font-size: 3.2rem;
+        /* 32px */
+
+    }
+    .swiper .subtitle{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slide-characters p {
+        max-width: 100%;
+    }
+}
+
+/* ---------- tablets (ate 991px) ---------- */
+@media (max-width: 991px) {
+
+    .container {
+        max-width: 95%;
+        padding: 0 3%;
+    }
+
+    .s-hero {
+        min-height: 80vh;
+        background-attachment: scroll;
+        /* fundo fixo treme no tablet/celular */
+    }
+
+    .s-trailer .left p{
+        text-align: center;
+    }
+
+    /* story empilha: imagem em cima, texto embaixo */
+    .s-story .container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .s-story .left {
+        max-width: 100%;
+    }
+
+    .s-story .left .subtitle {
+        justify-content: center;
+    }
+
+    .s-story .left h2 {
+        max-width: 100%;
+        /* 32px: mantem o padrao do breakpoint */
+    }
+
+    .s-story .left h2,
+    .s-story .left p {
+        text-align: center;
+    }
+
+    .corp {
+        flex-direction: column;
+        gap: 1.6rem;
+        text-align: center;
+    }
+
+    .corp p {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .kratos-atreus {
+        max-width: 42rem;
+    }
+
+    /* personagens: descricao empilha */
+    .description {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .swiper .subtitle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+
+    .s-character .left .subtitle {
+        justify-content: center;
+    }
+
+    .s-character .left h2 {
+        text-align: center;
+        max-width: 1500px;
+    }
+
+    .s-character .left p {
+        text-align: center;
+    }
+
+    .s-character .right {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .s-character .right .machado {
+        max-width: 24rem;
+    }
+
+    .right .text span {
+        max-width: 100%;
+    }
+
+    /* lenda empilha: imagem em cima, texto embaixo */
+    .s-lenda .container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .s-lenda .left {
+        max-width: 100%;
+    }
+
+    .s-lenda .left .subtitle {
+        justify-content: center;
+    }
+
+    .s-lenda .left h2 {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .s-lenda .left p {
+        text-align: center;
+    }
+
+    .kratos-lenda {
+        max-width: 42rem;
+    }
+
+    .s-story,
+    .s-trailer,
+    .s-character,
+    .s-lenda {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
+    /* info geral: icones em 2 por linha */
+    .s-info-geral ul li {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 95%;
+        padding: 0 3%;
+    }
+
+    .s-hero {
+        min-height: 80vh;
+        background-attachment: scroll;
+        /* fundo fixo treme no tablet/celular */
+    }
+
+    /* story empilha: imagem em cima, texto embaixo */
+    .s-story .container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .s-story .left {
+        max-width: 100%;
+    }
+
+    .s-story .left .subtitle {
+        justify-content: center;
+    }
+
+    .s-story .left h2 {
+        max-width: 100%;
+        /* 32px: mantem o padrao do breakpoint */
+    }
+
+    .s-story .left h2 {
+          text-align: center;
+    }
+
+    .s-story .left p {
+         text-align: justify;
+
+    }
+
+    .corp {
+        flex-direction: column;
+        gap: 1.6rem;
+        text-align: center;
+    }
+
+    .corp p {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .kratos-atreus {
+        max-width: 42rem;
+    }
+
+    /* personagens: descricao empilha */
+    .description {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+
+    .s-character .left {
+        max-width: 64rem;
+        display: flex;
+        flex-direction: column;
+
+        
+    }
+
+    .s-character .left .subtitle {
+        justify-content: center;
+    }
+
+    .s-character .left h2 {
+        text-align: center;
+        max-width: 1056px;
+    }
+
+    .s-character .left p {
+        text-align: center;
+    }
+
+    .s-character .right {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .s-character .right .machado {
+        max-width: 24rem;
+    }
+
+    
+
+    .right .text span {
+        max-width: 100%;
+    }
+
+    .swiper .subtitle{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    /* lenda empilha: imagem em cima, texto embaixo */
+    .s-lenda .container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .s-lenda .left {
+        max-width: 100%;
+    }
+
+    .s-lenda .left .subtitle {
+        justify-content: center;
+    }
+
+    .s-lenda .left h2 {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .s-lenda .left p {
+        text-align: justify;
+    }
+
+    .kratos-lenda {
+        max-width: 42rem;
+    }
+
+    .s-story,
+    .s-trailer,
+    .s-character,
+    .s-lenda {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
+    /* info geral: icones em 2 por linha */
+    .s-info-geral ul li {
+        width: 45%;
+    }
+}
+
+/* ---------- celulares (ate 560px) ---------- */
+@media (max-width: 560px) {
+
+    /* header compacto */
+    header {
+        height: auto;
+        padding: 1.6rem 0;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .sony {
+        display: none;
+    }
+
+    .plataform span {
+        display: none;
+    }
+
+    .logo {
+        max-width: 12rem;
+    }
+
+    /* info geral: icones em 2 por linha */
+    .s-info-geral ul li {
+        width: 50%;
+    }
+
+    /* hero preenche a tela baixinha */
+    .s-hero {
+        min-height: 75vh;
+        padding-bottom: 8rem;
+    }
+
+    .s-hero .left h1 {
+        font-size: clamp(3.2rem, 11vw, 4rem);
+    }
+
+    .value {
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    .value strong,
+    .value a {
+        width: 100%;
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 2rem;
+    }
+
+    /* trailer centraliza */
+    .s-trailer .left h2 {
+        text-align: center;
+    }
+
+    .s-trailer .right>span {
+        text-align: center;
+    }
+
+    .faixa-etaria {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+
+    .faixa-etaria p {
+        margin-left: 0;
+    }
+
+    /* story: volta a leitura justificada, titulo centralizado */
+    .s-story .left h2 {
+        text-align: center;
+        /* 32px: padrao do breakpoint */
+
+    }
+
+    .s-story .left p {
+        text-align: justify;
+
+    }
+
+    /* personagens */
+    .s-character .left p {
+        text-align: center;
+    }
+
+    .corp p {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* carrossel: 40px era maior que o breakpoint; usamos 32px */
+    .slide-characters h2 {
+        font-size: 3.2rem;
+        text-align: center;
+    }
+
+    /* botoes do card aparecem sem hover (no celular nao ha mouse) */
+    .image .btn-saiba-mais {
+        opacity: 1;
+        bottom: 1rem;
+    }
+
+    .image img:hover {
+        transform: none;
+    }
+
+    /* lenda: ajustes para celular */
+    .s-lenda {
+        background-attachment: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .s-lenda .left h2 {
+        font-size: 3.2rem;
+    }
+
+    .s-lenda .left p {
+        text-align: justify;
+    }
+
+    .kratos-lenda {
+        max-width: 100%;
+    }
+}
+
+/* ---------- celulares pequenos (ate 478px) ---------- */
+@media (max-width: 478px) {
+
+    /* titulos no menor degrau da escala */
+    .s-hero .left h1 {
+        font-size: 3.2rem;
+        /* 32px */
+
+    }
+
+    .s-trailer h2,
+    .s-story .left h2,
+    .description .left h2,
+    .s-lenda .left h2,
+    .slide-characters h2 {
+        font-size: 2.4rem;
+        /* 24px */
+
+    }
+
+    /* hero em coluna, ocupando a largura */
+    .s-hero .left {
+        padding: 0 1.6rem;
+
+    }
+
+    /* features da hero empilham com o texto centralizado */
+    .s-hero .left ul {
+        flex-direction: column;
+        gap: 0.8rem;
+
+    }
+
+    /* info geral: 1 icone por linha, com espaco confortavel */
+    .s-info-geral ul li {
+        width: 100%;
+
+    }
+
+    /* cards de personagem ocupam quase a largura toda */
+
+    .s-character .left> p {
+
+        text-align: justify;
+
+    }
+
+    .card-character {
+        max-width: 30rem;
+
+    }
+
+    .image {
+        height: 40rem;
+
+    }
+
+    /* rodape com respiro extra */
+    .rodape {
+        padding: 3.2rem 0;
+
+    }
+
+}
