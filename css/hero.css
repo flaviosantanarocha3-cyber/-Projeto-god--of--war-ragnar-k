@@ -104,5 +104,8 @@
 
 .value a:hover {
     background-color: #2a56c6;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transform: translateY(-0.3rem);
 }
+
+
