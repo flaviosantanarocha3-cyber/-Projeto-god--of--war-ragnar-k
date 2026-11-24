@@ -1,4 +1,12 @@
-
+/* ==========================================================================
+   01. VARIÁVEIS E BASE (RESET, HTML, BODY, MÍDIA)
+   ========================================================================== */
+:root {
+    --color-bg-page: #000201;
+    --color-text-white: #ffffff;
+    --color-text-muted: #bdc2cb;
+    --font-primary: 'Archivo Narrow', sans-serif;
+}
 
 /* ==================== RESET & BASE ==================== */
 * {
@@ -6,21 +14,26 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    font-family: 'Archivo Narrow', sans-serif;
-    color: white;
+    font-family: var(--font-primary);
+    color: var(--color-text-white);
     text-decoration: none;
-
 }
 
 html {
-    margin: 0 auto;
+
     font-size: 62.5%;
-    /* 1rem = 10px */
     scroll-behavior: smooth;
 }
 
+html .container {
+
+    margin: 0 auto;
+
+
+}
+
 body {
-    background-color: #000201;
+    background-color: var(--color-bg-page);
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -36,59 +49,64 @@ img {
     display: block;
 }
 
-/* ==================== CONTAINER ==================== */
+/* ==========================================================================
+   02. CONTAINER E COMPONENTES GERAIS
+   ========================================================================== */
 .container {
-
     width: 100%;
     max-width: 140.8rem;
-    margin: 0 auto;
     padding: 0 4%;
 }
 
-/* ==================== COMPONENTES ==================== */
-/* etiqueta com icone losango + texto (usada em todas as secoes) */
+/* Etiqueta com ícone losango + texto (usada em todas as seções) */
 .subtitle {
     display: flex;
     align-items: center;
-
 }
 
 .subtitle span {
     font-weight: 400;
-    font-size: 1.6rem;
-    /* 16px */
     line-height: 2.2rem;
-    color: #ffffff;
+
     margin-left: 1.5rem;
+}
+
+.subtitle span,
+p {
+
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.subtitle span,
+h2 {
+
+    color: var(--color-text-white);
 
 }
 
-/* h2 padrao das secoes (era diferente em cada uma; agora um so) */
+/* Títulos e textos padrão */
 h1 {
 
-    font-weight: 700;
     font-size: 5rem;
     line-height: 110%;
 }
 
-
+h1,
 h2 {
 
     font-weight: 700;
-    font-size: 4rem;
-    /* 40px: tamanho padrao de titulo de secao */
-    color: white;
-    line-height: 130%;
-
 }
 
-/* p padrao (paragrafo de leitura das secoes) */
+h2 {
+
+    font-size: 4rem;
+    line-height: 130%;
+}
+
 p {
 
-    font-weight: 400;
-    font-size: 1.6rem;
-    /* 16px: padrao de paragrafo */
     line-height: 160%;
-    color: #bdc2cb;
+    color: var(--color-text-muted);
     text-align: justify;
 }

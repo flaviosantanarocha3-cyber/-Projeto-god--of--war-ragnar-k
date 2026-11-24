@@ -1,20 +1,115 @@
 
+/* ==========================================================================
+   05. VARIÁVEIS DE CORES (INFORMAÇÕES GERAIS, TRAILER, HISTÓRIA,
+       PERSONAGENS, LENDA E RODAPÉ)
+   ========================================================================== */
+:root {
+    --color-info-bg: #04070e;
+    --color-border-accent-subtle: rgba(50, 101, 234, 0.25);
+    --color-cta-red: #c0392b;
+    --color-cta-red-hover: #e74c3c;
+    --color-value-strong-alt-hover: #e6e6e6;
+}
+
+/* --- Compartilhados: layout e espaçamento --- */
+.s-info-geral,
+.s-trailer,
+.s-story,
+.s-character,
+.description,
+.slide-characters,
+.s-lenda,
+.rodape {
+    width: 100%;
+}
+
+.s-info-geral,
+.s-trailer .container,
+.s-story .container,
+.description,
+.faixa-etaria,
+.corp,
+.s-character .right,
+.s-lenda .container {
+    display: flex;
+    align-items: center;
+}
+
+.s-trailer .container,
+.s-story .container,
+.description,
+.s-lenda .container {
+    justify-content: space-between;
+    gap: 6.4rem;
+}
+
+.s-trailer,
+.s-character {
+    padding: 12rem 0;
+}
+
+.s-story,
+.s-lenda {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+}
+
+/* --- Compartilhados: títulos, textos e imagens --- */
+.s-trailer .left h2,
+.s-story .left h2,
+.s-lenda .left h2 {
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+}
+
+.s-info-geral ul li span,
+.slide-characters h2,
+.slide-characters p,
+.info h3,
+.info span {
+    text-align: center;
+}
+
+.s-info-geral ul li span,
+.faixa-etaria p,
+.corp p,
+.right .text span,
+.image .btn-saiba-mais,
+.info span {
+    font-size: 1.4rem;
+}
+
+.s-trailer .right>span,
+.s-character .left p,
+.info h3 {
+    font-size: 1.8rem;
+}
+
+.s-info-geral ul li span,
+.faixa-etaria p,
+.right .text span,
+.image .btn-saiba-mais,
+.btn-topo {
+    color: var(--color-text-white);
+}
+
+.kratos-atreus,
+.kratos-lenda {
+    width: 100%;
+    border-radius: 1.5rem;
+    filter: drop-shadow(0 2rem 4rem rgba(0, 0, 0, 0.6));
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
 
 /* ==================== SEÇÃO INFORMAÇÕES GERAIS ==================== */
 .s-info-geral {
-
-    width: 100%;
     padding: 4.8rem 0;
-    display: flex;
-    align-items: center;
-    /* faixa azul-escura que separa as secoes */
-    background-color: #04070e;
-    border-top: 1px solid rgba(50, 101, 234, 0.25);
-    border-bottom: 1px solid rgba(50, 101, 234, 0.25);
+    background-color: var(--color-info-bg);
+    border-top: 1px solid var(--color-border-accent-subtle);
+    border-bottom: 1px solid var(--color-border-accent-subtle);
 }
 
 .s-info-geral ul {
-
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -22,7 +117,6 @@
 }
 
 .s-info-geral ul li {
-
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -39,42 +133,23 @@
 }
 
 .s-info-geral ul li:hover span {
-    color: #8fb3f5;
+    color: var(--color-accent-hover-text);
 }
 
 .s-info-geral ul li span {
-
     display: flex;
     align-items: center;
-    text-align: center;
     font-weight: 400;
-    font-size: 1.4rem;
-    /* 14px */
     line-height: 160%;
-    color: #fff;
     margin-top: 1.2rem;
 }
 
 /* ==================== SEÇÃO TRAILER ==================== */
-/*
-   O video e o gif tem secao propria,
-*/
 .s-trailer {
-
-
-    padding: 12rem 0;
     background-image:
         radial-gradient(ellipse at 85% 50%,
             rgba(50, 101, 234, 0.18) 0%,
             rgba(0, 2, 1, 0) 60%);
-    /* brilho azul discreto atras do video */
-}
-
-.s-trailer .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6.4rem;
 }
 
 .s-trailer .left {
@@ -83,19 +158,12 @@
 }
 
 .s-trailer .left h2 {
-
-    margin-top: 2.4rem;
-    margin-bottom: 2.4rem;
     text-align: left;
-    /* usa o h2 padrao de 4rem (era 4.2rem aqui) */
     letter-spacing: 1.5px;
     max-width: 500px;
-
 }
 
-
 .s-trailer .right {
-
     width: 100%;
     max-width: 44.8rem;
     display: flex;
@@ -103,18 +171,15 @@
 }
 
 .s-trailer .right>span {
-
     display: block;
     font-weight: 700;
     line-height: 2rem;
-    font-size: 1.8rem;
     margin-bottom: 2.4rem;
 }
 
 .s-trailer .right button {
-
     width: 100%;
-    border: 0.2rem solid #3265ea;
+    border: 0.2rem solid var(--color-accent-hover-border);
     overflow: hidden;
     position: relative;
     margin-bottom: 4.8rem;
@@ -122,7 +187,6 @@
     transition: all 300ms ease;
 }
 
-/* o botao inteiro acende quando o mouse passa por cima */
 .s-trailer .right button:hover {
     transform: translateY(-0.4rem);
     box-shadow: rgba(50, 101, 234, 0.35) 0 1rem 3rem;
@@ -133,7 +197,6 @@
 }
 
 .icon-play {
-
     position: absolute;
     bottom: 2.5rem;
     left: 3.2rem;
@@ -145,69 +208,37 @@
     transform: scale(1.15);
 }
 
-.faixa-etaria {
-
-    display: flex;
-    align-items: center;
-}
-
 .faixa-etaria img {
     width: 6.4rem;
 }
 
 .faixa-etaria p {
-
-    color: #fff;
     font-weight: 400;
-    font-size: 1.4rem;
-    /* 14px */
     line-height: 1.7rem;
     margin-left: 1.5rem;
 }
 
 /* ==================== SEÇÃO STORY ==================== */
 .s-story {
-
-    width: 100%;
-
-    padding-top: 12rem;
-    padding-bottom: 12rem;
     background-image:
         radial-gradient(ellipse at 12% 45%,
             rgba(50, 101, 234, 0.10) 0%,
             rgba(0, 2, 1, 0) 55%),
-        /* brilho azul do lado do texto */
         url(../assets/img/icones/bg-story.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-
 }
 
-.s-story .container {
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6.4rem;
-
-}
-
-/* --- texto da historia (escopo proprio) --- */
 .s-story .left {
     width: 100%;
     max-width: 64rem;
 }
 
 .s-story .left h2 {
-
-    margin-top: 2.4rem;
-    margin-bottom: 2.4rem;
     letter-spacing: 1px;
     text-align: justify;
-
-       
 }
 
 .s-story .left p {
@@ -215,69 +246,37 @@
     text-align: justify;
 }
 
-.corp {
-    display: flex;
-    align-items: center;
-
-}
-
 .corp img {
     width: 12rem;
-
 }
 
 .corp p {
-
     margin-bottom: 0;
-    font-size: 1.4rem;
-    /* 14px */
     line-height: 160%;
     margin-left: 4.8rem;
     max-width: 32rem;
 }
 
 .kratos-atreus {
-    width: 100%;
-    border-radius: 1.5rem;
     max-width: 50rem;
-    /* filtro deixa a imagem "encostar" no fundo escuro */
-    filter: drop-shadow(0 2rem 4rem rgba(0, 0, 0, 0.6));
-    transition: transform 0.4s ease, filter 0.4s ease;
-    /* suaviza a animação */
 }
-
 
 /* ==================== SEÇÃO PERSONAGENS ==================== */
-.s-character {
-    padding: 12rem 0;
-    width: 100%;
-}
-
 .description {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 6.4rem;
     background-image: url(imagem/img/bg-characters.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
     padding: 6rem 4rem;
     margin-bottom: 6rem;
-    /* borda azul sutil: a secao vira um palco fechado */
-    border: 1px solid rgba(50, 101, 234, 0.25);
+    border: 1px solid var(--color-border-accent-subtle);
     border-radius: 0.8rem;
 }
 
 .description .left h2 {
-
-    /* padrao 4rem (era 4.6rem) */
     max-width: 500px;
     letter-spacing: 1px;
     text-align: left;
-
 }
 
 .s-character .left {
@@ -286,76 +285,51 @@
 }
 
 .s-character .left h2 {
-
     margin-top: 2.4rem;
     margin-bottom: 3.2rem;
     text-align: justify;
-    /* padrao 4rem */
-
 }
 
 .s-character .left p {
-
     text-align: justify;
-    font-size: 1.8rem;
-    
 }
 
 .s-character .right {
-
-    display: flex;
-    align-items: center;
     flex-direction: row;
     width: 100%;
     max-width: 60rem;
 }
 
 .s-character .right .machado {
-
     width: 100%;
     max-width: 32rem;
 }
 
 .right .text span {
-
     display: block;
     font-weight: 500;
-    font-size: 1.4rem;
-    /* 14px */
     line-height: 140%;
-    color: #fff;
     max-width: 32rem;
     margin-top: 2.2rem;
     text-align: justify;
 }
 
 /* ==================== CARROSSEL SWIPER ==================== */
-
-/* CORRIGIDO: o titulo do carrossel estava DENTRO do .swiper e
-    */
 .slide-characters {
-    width: 100%;
     max-width: 120rem;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
     padding-bottom: 5rem;
-    /* espaço para as bolinhas de paginação */
     padding-top: 0.8rem;
-    /* respiro para o titulo interno nao encostar na borda */
 }
 
-/* titulos do carrossel: entraram no padrao de fonte */
 .slide-characters h2 {
-    /* padrao 4rem, centralizado */
     margin: 1.6rem auto 0.8rem auto;
-    text-align: center;
 }
 
 .slide-characters p {
-
     margin: 1.6rem auto;
-    text-align: center;
     max-width: 64rem;
 }
 
@@ -366,7 +340,6 @@
 .card-character {
     width: 100%;
     max-width: 38.4rem;
-    /* centraliza o card dentro do slide em telas grandes */
     margin: 0 auto;
 }
 
@@ -377,7 +350,6 @@
     position: relative;
     overflow: hidden;
     border-radius: 0.8rem;
-    /* cantos suaves: toque moderno */
 }
 
 .image img {
@@ -388,18 +360,12 @@
     transition: all 400ms ease;
 }
 
-/* ============================================================
-   BOTAO SAIBA MAIS
-  
-   ============================================================ */
+/* ==================== BOTÃO SAIBA MAIS ==================== */
 .image .btn-saiba-mais {
-
     display: block;
     padding: 1.6rem 3.2rem;
-    background-color: #3265ea;
-    color: #fff;
+    background-color: var(--color-accent-hover-border);
     font-weight: 400;
-    font-size: 1.4rem;
     line-height: 2rem;
     position: absolute;
     bottom: 0;
@@ -421,58 +387,41 @@
 
 .info h3 {
     font-weight: 700;
-    font-size: 1.8rem;
-    /* 18px */
     line-height: 2rem;
     margin-bottom: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     transition: color 300ms ease;
-    text-align: center;
 }
 
-/* o nome do personagem acende em azul junto com o card */
 .card-character:hover .info h3 {
-    color: #8fb3f5;
+    color: var(--color-accent-hover-text);
 }
 
 .info span {
     font-weight: 400;
-    font-size: 1.4rem;
-    /* 14px */
     line-height: 1.5rem;
-    color: #bdc2cb;
+    color: var(--color-text-muted);
     text-transform: capitalize;
-    text-align: center;
-    /* CORRIGIDO: display:flex aqui quebrava textos de 2+ linhas;
-       o text-align acima ja centraliza */
     display: block;
     padding: 0 1.6rem;
 }
 
-/* bolinhas da paginacao na cor do projeto */
 .swiper-pagination-bullet {
-    background-color: #bdc2cb;
+    background-color: var(--color-text-muted);
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #3265ea;
+    background-color: var(--color-accent-hover-border);
 }
 
 /* ==================== SEÇÃO LENDA ==================== */
 .s-lenda {
-    width: 100%;
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-
     background-image:
-        /* camada escura mais intensa */
         linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)),
-        /* brilho azul do lado do texto */
         radial-gradient(ellipse at 12% 45%,
             rgba(50, 101, 234, 0.15) 0%,
             rgba(0, 2, 1, 0) 55%);
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -481,33 +430,19 @@
     position: relative;
 }
 
-
 .s-lenda .container {
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6.4rem;
     position: relative;
     z-index: 2;
-    /* acima do slideshow de fundo */
-
-
 }
 
-/* --- texto da lenda (escopo proprio) --- */
 .s-lenda .left {
     width: 100%;
     max-width: 64rem;
 }
 
 .s-lenda .left h2 {
-
-    margin-top: 2.4rem;
-    margin-bottom: 2.4rem;
     letter-spacing: 1px;
     text-align: justify;
-    /* padrao 4rem */
 }
 
 .s-lenda .left p {
@@ -515,58 +450,15 @@
     text-align: justify;
 }
 
-
 .kratos-lenda {
-    width: 100%;
-    border-radius: 1.5rem;
     max-width: 35.2rem;
-    /* filtro deixa a imagem "encostar" no fundo escuro */
-    filter: drop-shadow(0 2rem 4rem rgba(0, 0, 0, 0.6));
-    transition: transform 0.4s ease, filter 0.4s ease;
-    /* suaviza a animação */
 }
 
-.value strong:hover{
-
-    background-color: ##e6e6e6;
+.value strong:hover {
+    background-color: var(--color-value-strong-alt-hover);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
-
 }
 
-/* ==================== RODAPE ==================== */
-.rodape {
-
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 24px 0;
-    flex-direction: column;
-}
-
-
-.rodape p {
-
-    font-size: 1.6rem;
-    /* 16px, padrao de paragrafo */
-}
-
-.btn-topo {
-    margin-top: 1.6rem;
-    padding: 0.8rem 1.6rem;
-    background: #c0392b;
-    /* vermelho estilo God of War */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.btn-topo:hover {
-    background: #e74c3c;
-}
 
 
 /* slideshow de fundo da secao lenda (9 imagens) */

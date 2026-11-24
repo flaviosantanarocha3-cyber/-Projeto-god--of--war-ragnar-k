@@ -1,53 +1,59 @@
+/*/* ==========================================================================
+   03. HEADER
+   ========================================================================== */
 
+/* Variáveis adicionais desta seção (unir ao :root principal quando juntar os arquivos) */
+:root {
+    --color-border-white: #ffffff;
+    --color-accent-hover-border: #3265ea;
+    --color-accent-hover-text: #8fb3f5;
+    --space-plataforma-gap: 0.8rem;
+}
 
-/* ==================== HEADER ==================== */
-header {
-
-    width: 100%;
-    height: 10rem;
+header,
+header .container,
+.plataform,
+.plataform ul {
     display: flex;
     align-items: center;
-    background-color: #000201;
+}
+
+header .container span,
+.plataform ul li {
+    font-size: 1.4rem;
+}
+
+header {
+    width: 100%;
+    height: 10rem;
+    background-color: var(--color-bg-page);
 }
 
 header .container {
-    display: flex;
-    align-items: center;
-
     justify-content: space-between;
 }
 
-header .container span {
-
-    font-size: 1.4rem;
-}
-
-.plataform {
-    display: flex;
-    align-items: center;
-}
-
 .plataform ul {
-
-    display: flex;
-    align-items: center;
     margin-left: 1.8rem;
-    gap: 0.8rem;
+
+}
+.plataform ul li {
+
+    gap: var(--space-plataforma-gap);
 }
 
 .plataform ul li {
-
-    padding: 0.8rem 0.8rem;
-    border: 0.15rem solid #fff;
-    font-size: 1.4rem;
+    /* REPETIDO: 0.8rem compartilhado com o gap de .plataform ul */
+    padding: var(--space-plataforma-gap);
+    border: 0.15rem solid var(--color-border-white);
     line-height: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     transition: all 300ms ease;
 }
 
-/* as etiquetas de plataforma acendem em azul no hover */
+/* As etiquetas de plataforma acendem em azul no hover */
 .plataform ul li:hover {
-    border-color: #3265ea;
-    color: #8fb3f5;
+    border-color: var(--color-accent-hover-border);
+    color: var(--color-accent-hover-text);
 }

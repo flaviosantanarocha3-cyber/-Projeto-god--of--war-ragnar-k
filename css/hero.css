@@ -1,16 +1,15 @@
+/* ==========================================================================
+   04. HERO (AGRUPAMENTO SEGURO)
+   ========================================================================== */
 
-/* ==================== SEÇÃO HERO ==================== */
-/*
-   HERO LIVRE: ficou só com a mensagem de impacto.
-*/
-.s-hero {
-    /* altura minima de uma tela inteira (cresce se precisar) */
-    min-height: 92vh;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 12rem;
-
-    background-image: radial-gradient(ellipse at 18% 82%,
+:root {
+    --color-hero-btn-bg: #ffffff;
+    --color-hero-btn-hover: #d4d7dc;
+    --color-hero-cta-bg: #3265ea;
+    --color-hero-cta-hover: #2a56c6;
+    --shadow-hero-title: 0 0.4rem 4rem rgba(50, 101, 234, 0.35);
+    --shadow-hero-cta-hover: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --bg-hero-overlay: radial-gradient(ellipse at 18% 82%,
             rgba(50, 101, 234, 0.18) 0%,
             rgba(0, 2, 1, 0) 55%),
         linear-gradient(to bottom,
@@ -18,94 +17,106 @@
             rgba(0, 2, 1, 0.75) 55%,
             #000201 100%),
         url('../assets/img/personagem/imagemHero.webp');
+}
+
+/* Containers flex da seção hero */
+.s-hero,
+.s-hero .container,
+.s-hero .left,
+.value {
+    display: flex;
+}
+
+/* Textos claros da hero que compartilham a cor branca */
+.hero-frase,
+.value a {
+
+    color: var(--color-text-white);
+}
+
+/* Propriedades visuais compartilhadas entre os blocos de ação (.value strong e .value a) */
+.value strong,
+.value a {
+    padding: 2.4rem 3.2rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    /* REPETIDO: transition: all 300ms ease já usado em .plataform ul li na parte 03 */
+    transition: all 300ms ease;
+}
+
+/* Movimento de elevação compartilhado no hover dos botões da hero */
+.value strong:hover,
+.value a:hover {
+    transform: translateY(-0.3rem);
+}
+
+/*
+   HERO LIVRE: ficou só com a mensagem de impacto.
+*/
+.s-hero {
+    /* altura mínima de uma tela inteira (cresce se precisar) */
+    min-height: 92vh;
+    align-items: flex-end;
+    padding-bottom: 12rem;
+
+    background-image: var(--bg-hero-overlay);
     background-position: center;
     background-repeat: no-repeat;
-    /* CORRIGIDO: era contain (deixava vazio nas laterais);
-       cover preenche a tela inteira, padrao cinematico */
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-
 }
 
 .s-hero .container {
-    display: flex;
     align-items: flex-end;
     justify-content: space-between;
 }
 
-/* --- texto da hero (unico .left desta secao) --- */
+/* --- texto da hero (único .left desta seção) --- */
 .s-hero .left {
     width: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .s-hero .left h1 {
-
     margin-top: 3.2rem;
     margin-bottom: 1.6rem;
     /* clamp: cresce com a tela sem estourar no celular */
     font-size: clamp(3.6rem, 6.5vw, 7.2rem);
     line-height: 100%;
-
-    /* brilho azul atras do titulo (profundidade) */
-    text-shadow: 0 0.4rem 4rem rgba(50, 101, 234, 0.35);
+    /* brilho azul atrás do título (profundidade) */
+    text-shadow: var(--shadow-hero-title);
 }
 
 .hero-frase {
-    /* paragrafo destaque da hero (20px) */
+    /* parágrafo destaque da hero (20px) */
     font-weight: 500;
     font-size: 2rem;
     line-height: 140%;
     margin-bottom: 4.8rem;
-    color: #ffffff;
 }
 
-/* botao da hero */
-.value {
-
-    display: flex;
-
-}
-
+/* botão da hero */
 .value strong {
+    background-color: var(--color-hero-btn-bg);
 
-    background-color: #ffffff;
-    padding: 2.4rem 3.2rem;
-    color: #000201;
-    font-weight: 700;
-    line-height: 2.2rem;
-    font-size: 1.8rem;
-    transition: all 300ms ease;
+    color: var(--color-bg-page);
 }
 
 .value strong:hover {
-    background-color: #d4d7dc;
-    transform: translateY(-0.3rem);
+    background-color: var(--color-hero-btn-hover);
 }
 
 .value a {
-
-    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2.4rem 3.2rem;
-    background-color: #3265ea;
-    font-weight: 700;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    color: #ffffff;
-    transition: all 300ms ease;
+    background-color: var(--color-hero-cta-bg);
 }
 
 .value a:hover {
-    background-color: #2a56c6;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    transform: translateY(-0.3rem);
+    background-color: var(--color-hero-cta-hover);
+    box-shadow: var(--shadow-hero-cta-hover);
 }
-
-

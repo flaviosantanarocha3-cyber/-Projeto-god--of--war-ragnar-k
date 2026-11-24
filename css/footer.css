@@ -1,0 +1,30 @@
+
+
+/* ==================== RODAPE ==================== */
+.rodape {
+
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+    flex-direction: column;
+}
+
+.btn-topo {
+    margin-top: 1.6rem;
+    padding: 0.8rem 1.6rem;
+    background: var(--color-cta-red);
+    /* vermelho estilo God of War */
+    color: var(--color-text-white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-topo:hover {
+    background: var(--color-cta-red-hover);
+}
