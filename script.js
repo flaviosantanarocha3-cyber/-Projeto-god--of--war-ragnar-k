@@ -125,3 +125,21 @@ ScrollReveal().reveal('.s-lenda .left', {
   reset: true
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const framesLenda = [
+        'assets/img/bg-animacao/imagem1-filtered-comprimida.png',
+        'assets/img/bg-animacao/imagem2-filtered-comprimida.png',
+        'assets/img/bg-animacao/imagem3-filtered-comprimida.png',
+        'assets/img/bg-animacao/imagem4-filtered-comprimida.png',
+        'assets/img/bg-animacao/imagem5-filtered-comprimida.png',
+        'assets/img/bg-animacao/imagem6-filtered-comprimida.png',
+        'assets/img/bg-animacao/imagem7-filtered-comprimida.png',
+        'assets/img/bg-animacao/imagem8-filtered-comprimida.png',
+        'assets/img/bg-animacao/imagem9-filtered-comprimida.png',
+    ];
+
+    framesLenda.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+    });
+});
